@@ -59,23 +59,23 @@ drupalvm
 
 # Ignore configuration files that may contain sensitive information.
 # ------------------------------------------------------------------------------
-docroot/sites/default/settings.local.php
-docroot/sites/default/services.yml
+web/sites/default/settings.local.php
+web/sites/default/services.yml
 local.drushrc.php
 local.aliases.drushrc.php
 local.services.yml
 
 # Ignore paths that contain user-generated content.
 # ------------------------------------------------------------------------------
-docroot/sites/*/files
+web/sites/*/files
 /files-private
-docroot/sites/*/private
+web/sites/*/private
 /private
 
 # Ignore custom theme build artifacts
 # ------------------------------------------------------------------------------
-docroot/themes/custom/*/node_modules
-docroot/themes/custom/*/bower_components
+web/themes/custom/*/node_modules
+web/themes/custom/*/bower_components
 
 # Sass
 # ------------------------------------------------------------------------------
@@ -90,28 +90,28 @@ docroot/themes/custom/*/bower_components
 
 # Ignore some drupal files and components
 vendor
-docroot/core
-docroot/modules/contrib
-docroot/themes/contrib
-docroot/profiles/contrib
-docroot/libraries
-docroot/.csslintrc
-docroot/.editorconfig
-docroot/.eslintignore
-docroot/.eslintrc.json
-docroot/.gitattributes
-docroot/.ht.router.php
-docroot/.htaccess
-docroot/INSTALL.txt
-docroot/README.txt
-docroot/autoload.php
-docroot/example.gitignore
-docroot/index.php
-docroot/robots.txt
-docroot/update.php
-docroot/web.config
-docroot/sites/simpletest/
-docroot/README.md
+web/core
+web/modules/contrib
+web/themes/contrib
+web/profiles/contrib
+web/libraries
+web/.csslintrc
+web/.editorconfig
+web/.eslintignore
+web/.eslintrc.json
+web/.gitattributes
+web/.ht.router.php
+web/.htaccess
+web/INSTALL.txt
+web/README.txt
+web/autoload.php
+web/example.gitignore
+web/index.php
+web/robots.txt
+web/update.php
+web/web.config
+web/sites/simpletest/
+web/README.md
 /.editorconfig
 /.gitattributes
 /.phpunit.result.cache

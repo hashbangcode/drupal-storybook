@@ -1,0 +1,19 @@
+{% stories exampleComponent with { title: 'Components/Example Component' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      example_property: 'Example property',
+      example_slot: 'Example slot'
+    }
+  } %}
+
+    {% embed 'my_theme:example_component' %}
+      {% block example_slot %}
+        {{ example_slot|raw }}
+      {% endblock %}
+    {% endembed %}
+
+  {% endstory %}
+
+{% endstories %}

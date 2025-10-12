@@ -1,0 +1,15 @@
+name: Example Component
+description: "Example component."
+
+props:
+  type: object
+  properties:
+    example_property:
+      type: string
+      title: "Example property."
+      examples:
+        - "Some value"
+
+slots:
+  example_slot:
+    title: "Example Slot"

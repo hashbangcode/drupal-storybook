@@ -1,0 +1,25 @@
+name: my_theme
+type: theme
+'base theme': stable9
+version: 1.0.0
+libraries:
+  - core/drupalSettings
+  - my_theme/base
+  - my_theme/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - my_theme/user
+  core/drupal.dropbutton:
+    - my_theme/dropbutton
+  core/drupal.dialog:
+    - my_theme/dialog
+  file/drupal.file:
+    - my_theme/file
+  core/drupal.progress:
+    - my_theme/progress
+  core/drupal.tablesort:
+    - my_theme/drupal.tablesort
+description: ''
+core_version_requirement: ^11
+generator: 'starterkit_theme:11.2.5'

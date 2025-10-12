@@ -1,0 +1,119 @@
+# OS generated files
+# ------------------------------------------------------------------------------
+*~
+.directory
+.DS_Store*
+.project
+.settings
+.svn
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverride
+Desktop.ini
+
+# Thumbnails
+# ------------------------------------------------------------------------------
+._*
+Thumbs.db
+ehthumbs.db
+
+# Files that might appear on external disk
+# ------------------------------------------------------------------------------
+.Spotlight-V100
+.Trashes
+
+# IDE generated files
+# ------------------------------------------------------------------------------
+*.bbprojectd
+*.mode1v3
+*.mode2v3
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.tmproj
+*~.nib
+.idea
+.komodotools
+.project
+.settings
+nbproject
+atlassian-ide-plugin.xml
+.vscode
+
+# Vagrant
+# ------------------------------------------------------------------------------
+*.box
+.vagrant/
+
+# Ansible
+# ------------------------------------------------------------------------------
+*.retry
+
+# DrupalVM
+# ------------------------------------------------------------------------------
+drupalvm
+
+# Ignore configuration files that may contain sensitive information.
+# ------------------------------------------------------------------------------
+docroot/sites/default/settings.local.php
+docroot/sites/default/services.yml
+local.drushrc.php
+local.aliases.drushrc.php
+local.services.yml
+
+# Ignore paths that contain user-generated content.
+# ------------------------------------------------------------------------------
+docroot/sites/*/files
+/files-private
+docroot/sites/*/private
+/private
+
+# Ignore custom theme build artifacts
+# ------------------------------------------------------------------------------
+docroot/themes/custom/*/node_modules
+docroot/themes/custom/*/bower_components
+
+# Sass
+# ------------------------------------------------------------------------------
+.sass-cache
+
+# Exports
+# ------------------------------------------------------------------------------
+*.gz
+*.sql
+*.mysql
+*.zip
+
+# Ignore some drupal files and components
+vendor
+docroot/core
+docroot/modules/contrib
+docroot/themes/contrib
+docroot/profiles/contrib
+docroot/libraries
+docroot/.csslintrc
+docroot/.editorconfig
+docroot/.eslintignore
+docroot/.eslintrc.json
+docroot/.gitattributes
+docroot/.ht.router.php
+docroot/.htaccess
+docroot/INSTALL.txt
+docroot/README.txt
+docroot/autoload.php
+docroot/example.gitignore
+docroot/index.php
+docroot/robots.txt
+docroot/update.php
+docroot/web.config
+docroot/sites/simpletest/
+docroot/README.md
+/.editorconfig
+/.gitattributes
+/.phpunit.result.cache
+/.phpunit.cache
+/node_modules

@@ -1,0 +1,8 @@
+name: 'Storybook Install Profile'
+type: profile
+description: 'Storybook install profile.'
+core_version_requirement: ^10 || ^11
+
+install:
+  - drupal:node
+  - drupal:user

@@ -19,9 +19,13 @@ help: ## Display this help message
 storybook: ## Run storybook from inside DDEV.
 	@ddev exec "cd tests && npm run storybook"
 
-.PHONY: storybook-built
+.PHONY: storybook-build
 storybook-build: ## Build storybook from inside DDEV.
 	@ddev exec "cd tests && npm run build-storybook"
+
+.PHONY: storybook-install
+storybook-install: ## Install storybook inside DDEV.
+	@ddev exec "cd tests && npm install"
 
 .PHONY: generate-stories
 generate-stories: ## Generate all stories.

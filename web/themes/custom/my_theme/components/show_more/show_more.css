@@ -1,0 +1,42 @@
+.show-more {
+  text-align: center;
+  background-color: #fff;
+  padding-top: 30px;
+}
+
+.show-more-hidden {
+  display: none;
+}
+
+.show-more a.show-more-link {
+  background-color: var(--color-es-sun);
+  color: var(--color-black);
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius) var(--border-radius);
+  padding: 10px;
+}
+
+.show-more a.show-more-link:focus {
+  box-shadow: none;
+}
+
+.show-more-link:after {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2213.414%22%20height%3D%228.123%22%20viewBox%3D%220%200%2013.414%208.123%22%3E%3Cpath%20d%3D%22m6.721%206.71.425.425-.425-.425-.424.425.424-.425-6.015-6%206.015%206%205.985-6Z%22%20fill%3D%22none%22%20stroke%3D%22%233f84d5%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 12px 8px;
+  border: none;
+  content: "";
+  height: 8px;
+  width: 12px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin-left: 8px;
+  rotate: 0deg;
+}
+
+.show-more-link.rotate:after {
+  rotate: 180deg;
+}

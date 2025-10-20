@@ -1,0 +1,33 @@
+name: Show more component
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+props:
+  type: object
+  properties:
+    label_more:
+      type: string
+      title: Label more
+      examples:
+        - "Show more"
+    label_less:
+      type: string
+      title: Label less
+      examples:
+        - "Show less"
+    display_elements:
+      type: integer
+      title: The number of elements to display initially
+      examples:
+        - 4
+    container_selector:
+      type: string
+      title: The target parent element selector
+      examples:
+        - "#my-view-list"
+    target_selector:
+      type: string
+      title: The target child element selector
+      examples:
+        - ".my-view-list-item"

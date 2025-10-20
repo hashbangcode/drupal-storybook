@@ -1,0 +1,21 @@
+name: Ratings
+props:
+  type: object
+  properties:
+    rating:
+      title: Number of stars
+      type: number
+      minimum: 0
+      maximum: 5
+      examples:
+        - 3
+    rating_title:
+      title: Title for given rating
+      type: string
+      examples:
+        - "Interior"
+    style:
+      type: string
+      title: Style
+      examples:
+        - "rating-justify-left"

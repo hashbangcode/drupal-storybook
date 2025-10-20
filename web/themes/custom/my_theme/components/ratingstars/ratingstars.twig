@@ -1,0 +1,19 @@
+<div class="rating{% if style %} {{ style }}{% endif %}">
+  {% if rating_title %}
+    <div class="rating-label">
+      <span class="rating-label">{{ rating_title }}</span>
+    </div>
+  {% endif %}
+  <div class="rating-stars" data-rating="{{ rating }}">
+    {% if rating > 0 %}
+      {% for i in 1..rating %}
+        <img src="/{{ componentMetadata.path }}/assets/star-rating-filled.svg">
+      {% endfor %}
+    {% endif %}
+    {% if rating < 5 %}
+      {% for i in rating+1..5 %}
+        <img src="/{{ componentMetadata.path }}/assets/star-rating-empty.svg">
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>

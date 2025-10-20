@@ -1,0 +1,103 @@
+{% stories ratingstars with {
+  title: 'Components/Rating Stars'
+} %}
+  {% story default with {
+    name: '1. Rating Stars (0)',
+    args: {
+      rating: 0,
+    }
+  } %}
+    {{ include('my_theme:ratingstars', {
+      rating,
+    }) }}
+  {% endstory %}
+  {% story one with {
+    name: '2. Rating Stars (1)',
+    args: {
+      rating: 1,
+    }
+  } %}
+    {{ include('my_theme:ratingstars', {
+      rating,
+    }) }}
+  {% endstory %}
+  {% story two with {
+    name: '3. Rating Stars (2)',
+    args: {
+      rating: 2,
+    }
+  } %}
+    {{ include('my_theme:ratingstars', {
+      rating,
+    }) }}
+  {% endstory %}
+  {% story three with {
+    name: '4. Rating Stars (3)',
+    args: {
+      rating: 3,
+    }
+  } %}
+    {{ include('my_theme:ratingstars', {
+      rating,
+    }) }}
+  {% endstory %}
+  {% story four with {
+    name: '5. Rating Stars (4)',
+    args: {
+      rating: 4,
+    }
+  } %}
+    {{ include('my_theme:ratingstars', {
+      rating,
+    }) }}
+  {% endstory %}
+  {% story five with {
+    name: '6. Rating Stars (5)',
+    args: {
+      rating: 5,
+    }
+  } %}
+    {{ include('my_theme:ratingstars', {
+      rating,
+    }) }}
+  {% endstory %}
+  {% story threeTitle with {
+    name: '7. Rating Stars (3) with Title',
+    args: {
+      rating: 3,
+      rating_title: "Rating",
+    }
+  } %}
+    {{ include('my_theme:ratingstars', {
+      rating,
+      rating_title,
+    }) }}
+  {% endstory %}
+  {% story fiveTitle with {
+    name: '8. Rating Stars (5) with Title',
+    args: {
+      rating: 5,
+      rating_title: "Graphics",
+    }
+  } %}
+    {{ include('my_theme:ratingstars', {
+      rating,
+      rating_title,
+    }) }}
+  {% endstory %}
+  {% story treeRatingLeft with {
+    name: '9. Rating Stars With Title (Left Aligned)',
+    args: {
+      rating: 3,
+      rating_title: "Overview",
+      style: "rating-justify-left",
+    }
+  } %}
+    {{ include('my_theme:ratingstars', {
+      rating,
+      rating_title,
+      style,
+    }) }}
+  {% endstory %}
+
+{% endstories %}

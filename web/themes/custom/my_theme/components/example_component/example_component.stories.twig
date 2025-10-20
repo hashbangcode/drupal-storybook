@@ -4,7 +4,7 @@
     name: '1. Default',
     args: {
       example_property: 'Example property',
-      example_slot: 'Example slot'
+      example_slot: 'Example slot',
     }
   } %}
 
@@ -13,6 +13,24 @@
         {{ example_slot|raw }}
       {% endblock %}
     {% endembed %}
+
+  {% endstory %}
+
+  {% story wrapped with {
+    name: '2. Wrapped',
+    args: {
+      example_property: 'Example property',
+      example_slot: '<p>Example slot with lots of content.</p>',
+    }
+  } %}
+
+    <div style="border:1px solid red; width: 100px;">
+    {% embed 'my_theme:example_component' %}
+      {% block example_slot %}
+        {{ example_slot|raw }}
+      {% endblock %}
+    {% endembed %}
+    </div>
 
   {% endstory %}
 

@@ -13,3 +13,4 @@ props:
 slots:
   example_slot:
     title: "Example Slot"
+    description: "An example slot"

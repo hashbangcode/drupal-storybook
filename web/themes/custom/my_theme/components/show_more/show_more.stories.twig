@@ -1,0 +1,37 @@
+{% stories showMoreArrow with { title: 'Components/Show More'} %}
+
+  {% story default with {
+    name: '1. Show more',
+    args: {
+      label_more: 'Show more',
+      label_less: 'Show less',
+      display_elements: 4,
+      container_selector: '.show-more-content ul',
+      target_selector: 'li',
+    }
+  } %}
+    <div id="show-more-counter"></div>
+    <div class="show-more-content">
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+      </ul>
+    </div>
+    {{ include('my_theme:show_more', {
+      label_more,
+      label_less,
+      display_elements,
+      container_selector,
+      target_selectors,
+    }) }}
+  {% endstory %}
+
+{% endstories %}

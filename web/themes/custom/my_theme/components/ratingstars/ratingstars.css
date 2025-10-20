@@ -1,0 +1,35 @@
+.rating {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  column-gap: .3125rem;
+  justify-content: right;
+
+  .rating-label {
+    color: #000;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 1.1875rem;
+    line-height: 1.6875rem
+  }
+
+  .rating-stars {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: .25rem
+  }
+
+  .rating img {
+    height: 1.125rem;
+    width: 1.125rem
+  }
+}
+.rating.rating-justify-left {
+  justify-content: left;
+
+  .rating-label {
+    font-weight: 600;
+    color: #33475f
+  }
+}

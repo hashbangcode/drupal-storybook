@@ -57,3 +57,29 @@ drupal-install: ## Install Drupal using built in config.
 	@ddev drush si --existing-config --yes --account-name=admin --account-pass=admin
 	@ddev drush cr
 	@ddev drush cim -y
+
+.PHONY: drupal-setup
+drupal-setup: ## Set up Drupal for Twig development.
+	ddev drush state:set twig_debug 1
+	ddev drush state:set twig_cache_disable 1
+	ddev drush state:set disable_rendered_output_cache_bins 1
+
+.PHONY: composer-install
+composer-install: ## Install composer dependencies.
+	@ddev composer install
+
+.PHONY: install-all
+install-all: composer-install drupal-install drupal-setup storybook-install ## Install everything.
+
+.PHONY: clear
+clear: ## Clear the codebase of installed files.
+	rm -rf ./tests/node_modules
+	rm -rf ./tests/storybook-static
+	rm -rf ./vendor
+	rm -rf ./web/core
+	rm -rf ./web/modules/contrib
+	rm -rf ./web/theme/contrib
+	rm -rf ./web/index.php
+	rm -rf ./web/update.php
+	rm -rf ./web/autoload.php
+	rm -rf ./web/robots.txt

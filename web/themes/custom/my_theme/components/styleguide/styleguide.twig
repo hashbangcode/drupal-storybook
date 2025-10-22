@@ -12,8 +12,10 @@
     Ridiculus taciti interdum euismod luctus purus mollis. Nisl habitasse dignissim hendrerit quis turpis facilisis
     fusce vulputate. Malesuada tellus pulvinar placerat phasellus nostra.</p>
 
-  <p>Text with <strong>bold</strong> or <em>emphasis</em> tags.</p>
-
+  <p{% if extra_classes %} class="{{ extra_classes }}"{% endif %}>Text with <strong>bold</strong> or <em>emphasis</em> tags.</p>
+  {% block extra_markup %}
+    {{ extra_markup }}
+  {% endblock %}
   <p>Lobortis est est urna aliquet porttitor sagittis est nec vestibulum. Nisi quis orci inceptos proin mollis ex.
     Porttitor hac nulla mi diam quis erat urna leo. Proin facilisis urna ante praesent integer varius nostra est
     fringilla. Neque praesent cras aliquam leo gravida massa dui. Nullam potenti neque amet sapien scelerisque,

@@ -1,0 +1,13 @@
+<div class="types-example">
+  <div>Array Property:<br>
+{% for item in array_property %}
+  {{ item }}{% if loop.last %}.{% else %}, {% endif %}
+{% else %}No items found.
+{% endfor %}</div>
+  <div>Boolean Property:<br> {% if boolean_property %}true{% else %}false{% endif %}</div>
+  <div>Integer Property:<br> {{ integer_property }}</div>
+  <div>Number Property:<br> {{ number_property }}</div>
+  <div>Object Property:<br> {{ object_property.title }}</div>
+  <div>String Property:<br> {{ string_property }}</div>
+</div>
+

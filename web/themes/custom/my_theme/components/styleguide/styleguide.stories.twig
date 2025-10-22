@@ -2,9 +2,18 @@
   title: 'Styles/Style Guide'
 } %}
   {% story default with {
-    name: '1. Style Guide'
+    name: '1. Style Guide',
+    args: {
+      extra_classes: '',
+      extra_markup: 'Some extra markup.',
+    }
   } %}
-    {{ include('my_theme:styleguide', {
-    }) }}
+
+    {% embed 'my_theme:styleguide' %}
+      {% block extra_markup %}
+        {{ extra_markup|raw }}
+      {% endblock %}
+    {% endembed %}
   {% endstory %}
+
 {% endstories %}

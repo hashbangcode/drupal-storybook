@@ -1,0 +1,37 @@
+name: Types Example Component
+description: "Showing all property types in action."
+
+props:
+  type: object
+  properties:
+    array_property:
+      type: array
+      title: "Array property."
+      examples:
+        - ["Some value"]
+    boolean_property:
+      type: boolean
+      title: "Boolean property."
+      examples:
+        - true
+        - false
+    integer_property:
+      type: integer
+      title: "Integer property."
+      examples:
+        - 1
+    number_property:
+      type: number
+      title: "Number property."
+      examples:
+        - '1'
+    object_property:
+      type: object
+      title: "Object property."
+      examples:
+        -
+    string_property:
+      type: string
+      title: "String property."
+      examples:
+        - "Some value"

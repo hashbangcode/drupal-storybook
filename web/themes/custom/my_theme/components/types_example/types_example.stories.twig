@@ -1,0 +1,22 @@
+{% stories typesExample with { title: 'Components/Types Example' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      array_property: ['one', 'two'],
+      boolean_property: true,
+      integer_property: 1,
+      number_property: 1,
+      object_property: {
+        title: 'Title'
+      },
+      string_property: 'String',
+    }
+  } %}
+
+    {% embed 'my_theme:types_example' %}
+    {% endembed %}
+
+  {% endstory %}
+
+{% endstories %}

@@ -1,1 +1,16 @@
-name: POC for variable font
+name: Styleguide
+description: "Styleguide component."
+
+props:
+  type: object
+  properties:
+    extra_classes:
+      type: ['string', 'null']
+      title: Extra classes
+      examples:
+        - extrawide, dark
+
+slots:
+  extra_markup:
+    title: Some extra markup to add
+    description: Test markup by injecting it into the page here.

@@ -23,3 +23,6 @@ libraries-extend:
 description: ''
 core_version_requirement: ^11
 generator: 'starterkit_theme:11.2.5'
+
+# Add Single Directory Component schema enforcement.
+enforce_prop_schemas: true

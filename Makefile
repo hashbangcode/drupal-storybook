@@ -37,26 +37,30 @@ help: ## Display this help message
 
 .PHONY: storybook
 storybook: ## Run storybook from inside DDEV.
-	@ddev exec "cd tests && npm run storybook"
+	ddev exec "cd tests && npm run storybook"
 
 .PHONY: storybook-build
 storybook-build: ## Build storybook from inside DDEV.
-	@ddev exec "cd tests && npm run build-storybook"
+	ddev exec "cd tests && npm run build-storybook"
 
 .PHONY: storybook-install
 storybook-install: ## Install storybook inside DDEV.
-	@ddev exec "cd tests && npm install"
+	ddev exec "cd tests && npm install"
 
 .PHONY: generate-stories
 generate-stories: ## Generate all stories.
-	@ddev drush storybook:generate-all-stories --uri=https://drupal-storybook.ddev.site/
+	ddev drush storybook:generate-all-stories --uri=https://drupal-storybook.ddev.site/
+
+.PHONY: clear-generates-stories
+clear-generates-stories: ## Clear all generated stories.
+	ddev exec "rm -rf ./web/themes/custom/my_theme/components/*/*.stories.json"
 
 .PHONY: drupal-install
 drupal-install: ## Install Drupal using built in config.
-	@ddev drush sql-drop --yes
-	@ddev drush si --existing-config --yes --account-name=admin --account-pass=admin
-	@ddev drush cr
-	@ddev drush cim -y
+	ddev drush sql-drop --yes
+	ddev drush si --existing-config --yes --account-name=admin --account-pass=admin
+	ddev drush cr
+	ddev drush cim -y
 
 .PHONY: drupal-setup
 drupal-setup: ## Set up Drupal for Twig development.
@@ -66,7 +70,7 @@ drupal-setup: ## Set up Drupal for Twig development.
 
 .PHONY: composer-install
 composer-install: ## Install composer dependencies.
-	@ddev composer install
+	ddev composer install
 
 .PHONY: install-all
 install-all: composer-install drupal-install drupal-setup storybook-install ## Install everything.

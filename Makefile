@@ -51,8 +51,8 @@ storybook-install: ## Install storybook inside DDEV.
 generate-stories: ## Generate all stories.
 	ddev drush storybook:generate-all-stories --uri=https://drupal-storybook.ddev.site/
 
-.PHONY: clear-generates-stories
-clear-generates-stories: ## Clear all generated stories.
+.PHONY: clear-generated-stories
+clear-generated-stories: ## Clear all generated stories.
 	ddev exec "rm -rf ./web/themes/custom/my_theme/components/*/*.stories.json"
 
 .PHONY: drupal-install

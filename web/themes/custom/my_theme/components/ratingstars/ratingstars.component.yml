@@ -17,5 +17,12 @@ props:
     style:
       type: string
       title: Style
+      enum:
+        - none
+        - rating-justify-left
+      meta:enum:
+        none: Simple
+        rating-justify-left: Left Justify
+      default:
       examples:
         - "rating-justify-left"

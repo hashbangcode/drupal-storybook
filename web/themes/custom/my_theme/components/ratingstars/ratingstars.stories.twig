@@ -87,6 +87,12 @@
   {% endstory %}
   {% story treeRatingLeft with {
     name: '9. Rating Stars With Title (Left Aligned)',
+      argTypes: {
+          style: {
+              control: 'radio',
+              options: ['none', 'rating-justify-left'],
+          }
+      },
     args: {
       rating: 3,
       rating_title: "Overview",

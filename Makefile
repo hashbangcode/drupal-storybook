@@ -51,6 +51,10 @@ storybook-install: ## Install storybook inside DDEV.
 generate-stories: ## Generate all stories.
 	ddev drush storybook:generate-all-stories --uri=https://drupal-storybook.ddev.site/
 
+.PHONY: launch-storybook-static
+launch-storybook-static: ## Launch the storybook static site.
+	ddev launch /storybook-static
+
 .PHONY: clear-generated-stories
 clear-generated-stories: ## Clear all generated stories.
 	ddev exec "rm -rf ./web/themes/custom/my_theme/components/*/*.stories.json"
